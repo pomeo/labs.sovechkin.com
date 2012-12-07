@@ -5,6 +5,7 @@
 var express = require('express')
   , routes = require('./routes')
   , avatar = require('./routes/avatar')
+  , ask = require('./routes/ask')
   , http = require('http')
   , path = require('path');
 
@@ -30,6 +31,7 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/avatar', avatar.img);
+app.get('/ask', ask.index);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
