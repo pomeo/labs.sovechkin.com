@@ -1,5 +1,45 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.b-main
+    article
+      h2 Video chat
+      p
+        img(src="/images/chat.png")
+      p OpenTok API + socket.io
+      p
+        a(href="http://labs.sovechkin.com/chat") labs.sovechkin.com/chat
+      p Source code
+      ul
+        li
+          a(href="https://github.com/pomeo/labs.sovechkin.com/blob/master/routes/chat.js") github.com/pomeo/labs.sovechkin.com
+    article
+      h2 Ответь на вопрос из твиттера
+      p
+        img(src="/images/ask.png")
+      p На каждое обновление страницы выводится твит с вопросом
+      p
+        a(href="http://labs.sovechkin.com/ask") labs.sovechkin.com/ask
+      p Исходный код
+      ul
+        li
+          a(href="https://github.com/pomeo/labs.sovechkin.com/blob/master/routes/ask.js") github.com/pomeo/labs.sovechkin.com
+    article
+      h2 Random avatars
+      p
+        img(src="/images/avatars.png")
+      p Generate random avatar on GET request.
+      p Images taken from 
+        a(href="http://designfestival.com/cicada/break-it-down/?id=71") designfestival.com
+      pre
+        code
+          | GET: http://labs.sovechkin.com/avatar
+      p Source code
+      ul
+        li
+          a(href="https://github.com/pomeo/labs.sovechkin.com/blob/master/routes/avatar.js") github.com/pomeo/labs.sovechkin.com
+    article
+      h2 
+  ul.b-menu
+    li
+      a(href="http://sovechkin.com") back
