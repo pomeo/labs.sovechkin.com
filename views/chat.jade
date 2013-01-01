@@ -1,0 +1,30 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/chat.css')
+  body
+    div.b-main
+      
+      h1 #{title}
+
+      div#streams
+        div#publisherContainer
+        div#subscriberContainer
+  
+      div#controls
+        div#notificationContainer
+        button#nextButton Next
+
+    script(src='/socket.io/socket.io.js')
+    script(src='http://static.opentok.com/v0.91/js/TB.min.js')
+    script(src='/javascripts/chat.js')
+    script
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3260762-24']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
