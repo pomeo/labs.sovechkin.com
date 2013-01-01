@@ -7,8 +7,6 @@ var express = require('express')
   , avatar = require('./routes/avatar')
   , ask = require('./routes/ask')
   , chat = require('./routes/chat')
-  , graph = require('./routes/graph')
-  , graph2 = require('./routes/graph2')
   , http = require('http')
   , path = require('path');
 
@@ -42,8 +40,6 @@ app.get('/', routes.index);
 app.get('/avatar', avatar.img);
 app.get('/ask', ask.index);
 app.get('/chat', chat.index);
-app.get('/graph', graph.index);
-app.get('/graph2', graph2.index2);
 
 server.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
