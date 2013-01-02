@@ -8,3 +8,12 @@ html
     link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Cuprum|Open+Sans:300,400,600,700,800&subset=latin,cyrillic", media="screen")
   body
     block content
+  script
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3260762-24']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
