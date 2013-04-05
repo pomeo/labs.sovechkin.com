@@ -7,6 +7,7 @@ var express = require('express')
   , avatar = require('./routes/avatar')
   , ask = require('./routes/ask')
   , chat = require('./routes/chat')
+  , os = require('./routes/os')
   , http = require('http')
   , path = require('path');
 
@@ -40,6 +41,7 @@ app.get('/', routes.index);
 app.get('/avatar', avatar.img);
 app.get('/ask', ask.index);
 app.get('/chat', chat.index);
+app.get('/os', os.index);
 
 server.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
