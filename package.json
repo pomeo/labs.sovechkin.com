@@ -1,12 +1,16 @@
 {
   "name": "labs.sovechkin.com",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "node app"
   },
   "dependencies": {
-    "express": "3.0.3",
-    "jade": "*"
+    "express": "3.x",
+    "jade": "= 0.33.0",
+    "opentok": "= 0.3.4",
+    "twit": "= 1.1.8",
+    "canvas": "= 1.0.3",
+    "socket.io": "= 0.9.16"
   }
 }
