@@ -19,12 +19,11 @@ io.configure(function() {
   io.set('close timeout', 60*60*24);
 });
 
-app.enable('trust proxy');
-
 app.configure(function(){
-  app.set('port', process.env.PORT || 3000);
+  app.set('port', 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
+  app.enable('trust proxy');
   app.use(express.static(path.join(__dirname, 'public')));
   app.use(express.favicon());
   app.use(express.logger('dev'));
